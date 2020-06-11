@@ -19,7 +19,7 @@ function loadDataTable() {
                 "data": "id",
                 "render": function (data) {
                     return `<div class="text-center">
-                            <a href="/BList/Edit?id=${data}" class='btn btn-success text-white style='cursor:pointer; width:100px;'>
+                            <a href="/BList/Upsert?id=${data}" class='btn btn-success text-white style='cursor:pointer; width:100px;'>
                                 Edit
                             </a>
                             &nbsp;
@@ -44,6 +44,7 @@ function Delete(url) {
         title: "Are you sure?",
         text: "Once deleted, you will not be able to recover",
         icon: "warning",
+        buttons: true,   //เป็นปุ่ม cancel เป็นการเรียกใช้ของ sweet
         dangerMode: true
     }).then((willDelete) => {
         if (willDelete) {
