@@ -5,7 +5,7 @@ $(document).ready(function () {
 });
 
 function loadDataTable() {
-    loadDataTable = $('#DT_load').DataTable({
+    dataTable = $('#DT_load').DataTable({
         "ajax": {
             "url": "/api/book",
             "type": "GET",
@@ -28,14 +28,14 @@ function loadDataTable() {
                                 Delete
                             </a>
                             </div>`;
-                }, "width":"30%"
+                }, "width": "30%"
             }
         ],
         "language": {
             "emtyTable": "no data found"
         },
-        "width" : "100%"
-    })
+        "width": "100%"
+    });
 }
 
 
@@ -63,9 +63,4 @@ function Delete(url) {
         }
     });
 }
-
-
-
-
-
 
